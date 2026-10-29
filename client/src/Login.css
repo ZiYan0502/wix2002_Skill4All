@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #d8e5d8; /* Light pastel green background */
+  color: #333;
+}
+
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  z-index: 10;
+}
+
+/* Role Selector Tabs */
+.role-selector {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 8px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.role-btn {
+  padding: 10px 30px;
+  border-radius: 25px;
+  border: none;
+  background: transparent;
+  color: #555;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.role-btn:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.role-btn.active-student {
+  background: #3b8e53;
+  color: white;
+  box-shadow: 0 4px 10px rgba(59, 142, 83, 0.3);
+}
+
+.role-btn.active-ngo {
+  background: #8c8651;
+  color: white;
+  box-shadow: 0 4px 10px rgba(140, 134, 81, 0.3);
+}
+
+/* Single Card Wrapper */
+.cards-wrapper {
+  width: 100%;
+  background: transparent;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Individual Card Styling */
+.card {
+  width: 100%;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 550px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.student-card {
+  background-color: #ffffff;
+}
+
+.ngo-card {
+  background-color: #eae3d2; /* Beige background */
+}
+
+/* Headers */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.card-header h2 {
+  font-size: 26px;
+  color: #2b593f;
+}
+
+.header-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.student-icon {
+  background-color: #5d8a66;
+}
+
+.ngo-icon {
+  background-color: #8fa082;
+}
+
+/* Forms & Inputs */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 14px 14px 45px; /* space for icon */
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+  background: white;
+  transition: 0.3s;
+}
+
+.student-card .input-group input {
+  border: 1px solid #5d8a66;
+}
+
+.ngo-card .input-group input {
+  border: 1px solid #a39571;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  color: #999;
+  font-size: 18px;
+}
+
+/* Submit Buttons */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  color: white;
+  border: none;
+  border-radius: 25px; /* Pill shape */
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: opacity 0.3s;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+.student-btn {
+  background-color: #3b8e53;
+}
+
+.ngo-btn {
+  background-color: #8c8651;
+}
+
+/* Bottom Toggle Switches */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.toggle-bg {
+  background-color: #dcdcdc;
+  border-radius: 25px;
+  display: flex;
+  padding: 4px;
+  width: fit-content;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+  background-color: #b5c7ba;
+  color: #111;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
