@@ -1,29 +1,37 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 export default function Login() {
-  // Role selection state
-  const [activeRole, setActiveRole] = useState('student'); // 'student' or 'ngo'
-
-  // Independent toggle states for login vs signup
+  const [activeRole, setActiveRole] = useState('student');
   const [isStudentLogin, setIsStudentLogin] = useState(true);
   const [isNgoLogin, setIsNgoLogin] = useState(true);
 
+  const navigate = useNavigate();
+
   const handleStudentSubmit = (e) => {
     e.preventDefault();
-    alert(`Student ${isStudentLogin ? 'Login' : 'Registration'} Submitted`);
+    if (isStudentLogin) {
+      localStorage.setItem('userRole', 'student');
+      navigate('/student-dashboard'); 
+    } else {
+      alert('Student Registration Submitted');
+    }
   };
 
   const handleNgoSubmit = (e) => {
     e.preventDefault();
-    alert(`NGO ${isNgoLogin ? 'Login' : 'Registration'} Submitted`);
+    if (isNgoLogin) {
+      localStorage.setItem('userRole', 'ngo');
+      navigate('/org-dashboard'); 
+    } else {
+      alert('NGO Registration Submitted');
+    }
   };
 
   return (
     <div className="page-container">
       <div className="content-wrapper">
-        
-        {/* ================= ROLE SELECTOR ================= */}
         <div className="role-selector">
           <button 
             className={`role-btn ${activeRole === 'student' ? 'active-student' : ''}`}
@@ -40,7 +48,6 @@ export default function Login() {
         </div>
 
         <div className="cards-wrapper">
-          {/* ================= STUDENT CARD ================= */}
           {activeRole === 'student' && (
             <div className="card student-card">
               <div className="card-header">
@@ -89,7 +96,6 @@ export default function Login() {
             </div>
           )}
 
-          {/* ================= NGO CARD ================= */}
           {activeRole === 'ngo' && (
             <div className="card ngo-card">
               <div className="card-header">
