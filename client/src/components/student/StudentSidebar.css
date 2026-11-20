@@ -1,0 +1,174 @@
+
+/* =====================================
+   STUDENT SIDEBAR
+===================================== */
+
+.student-sidebar {
+  width: 76px;
+  min-width: 76px;
+  height: 100vh;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 12px 8px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border-right: 1px solid #dce3dd;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.08);
+
+  z-index: 10;
+}
+
+/* =====================================
+   LOGO
+===================================== */
+
+.student-sidebar-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.student-logo-image {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Hide Skill4All text in narrow sidebar */
+.student-sidebar-logo > span {
+  display: none;
+}
+
+/* =====================================
+   SIDEBAR MENU
+===================================== */
+
+.student-sidebar-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Menu buttons */
+
+.student-menu-btn {
+  position: relative;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: none;
+  border-radius: 9px;
+
+  background: transparent;
+  color: #222222;
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Hide menu text */
+
+.student-menu-btn > span:last-child {
+  display: none;
+}
+
+/* Menu icons */
+
+.student-menu-icon {
+  width: auto;
+  font-size: 23px;
+  text-align: center;
+}
+
+/* Hover */
+
+.student-menu-btn:hover {
+  background: #edf5ee;
+}
+
+/* Active menu */
+
+.student-menu-btn.active {
+  background: #b9ddc4;
+  color: #155b35;
+}
+
+/* Active indicator on the left */
+
+.student-menu-btn.active::before {
+  content: '';
+  position: absolute;
+
+  left: -15px;
+  top: 5px;
+
+  width: 4px;
+  height: 34px;
+
+  border-radius: 5px;
+  background: #286b49;
+}
+
+/* =====================================
+   LOGOUT
+===================================== */
+
+.student-sidebar-bottom {
+  width: 100%;
+  margin-top: auto;
+
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+.student-logout-btn {
+  color: #111111;
+}
+
+.student-logout-btn:hover {
+  background: #fff0ee;
+  color: #c64c43;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
+  .student-sidebar {
+    width: 65px;
+    min-width: 65px;
+    padding: 12px 6px;
+  }
+
+  .student-menu-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .student-sidebar-menu {
+    gap: 24px;
+  }
+}

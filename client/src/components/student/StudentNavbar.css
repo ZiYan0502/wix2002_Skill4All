@@ -1,0 +1,157 @@
+
+/* NAVBAR */
+
+.student-navbar {
+  width: 100%;
+  height: 74px;
+  min-height: 74px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 35px 0 38px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border-bottom: 1px solid #dce3dd;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
+
+  position: relative;
+  z-index: 5;
+}
+
+/* WELCOME */
+
+.student-navbar-welcome h1 {
+  margin: 0;
+  color: #111111;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* RIGHT SIDE */
+
+.student-navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+
+/* PROFILE */
+
+.student-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.student-profile-avatar {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #a5c3a5;
+  border-radius: 50%;
+
+  background: #dcebdd;
+  color: #286b49;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.student-profile-name {
+  color: #222222;
+  font-size: 16px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* CSS CHEVRON */
+
+.student-profile-arrow {
+  width: 7px;
+  height: 7px;
+
+  border-right: 1.5px solid #555555;
+  border-bottom: 1.5px solid #555555;
+
+  transform: rotate(45deg);
+  margin-left: 2px;
+  margin-top: -4px;
+}
+
+/* NOTIFICATION */
+
+.student-notification-btn {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  color: #111111;
+  cursor: pointer;
+}
+
+.student-notification-btn:hover {
+  color: #286b49;
+}
+
+.student-notification-dot {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: #e66b5d;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .student-navbar {
+    height: 68px;
+    min-height: 68px;
+    padding: 0 15px;
+  }
+
+  .student-navbar-welcome h1 {
+    font-size: 17px;
+  }
+
+  .student-navbar-actions {
+    gap: 15px;
+  }
+
+  .student-profile {
+    gap: 8px;
+  }
+
+  .student-profile-avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .student-profile-name {
+    display: none;
+  }
+}
+

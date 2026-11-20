@@ -1,0 +1,787 @@
+/* =====================================
+   STUDENT DASHBOARD MAIN LAYOUT
+===================================== */
+
+.student-dashboard {
+  --primary-green: #155b35;
+  --background-green: #f0f7ef;
+
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--background-green);
+  color: #111;
+  font-family: Arial, sans-serif;
+}
+
+.student-main-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.student-dashboard-content {
+  width: 100%;
+  padding: 14px 28px 35px;
+  box-sizing: border-box;
+}
+
+/* =====================================
+   VOLUNTEER / LEARNING TOGGLE
+===================================== */
+
+.student-tab-section {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 14px;
+}
+
+.student-tab-switch {
+  width: 360px;
+  max-width: 100%;
+  display: flex;
+  padding: 2px;
+  border: 1px solid #222;
+  border-radius: 30px;
+  background: transparent;
+}
+
+.student-tab-switch button {
+  flex: 1;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 25px;
+  background: transparent;
+  color: #111;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.student-tab-switch button.active {
+  background: var(--primary-green);
+  color: white;
+}
+
+/* =====================================
+   TOP GRID
+===================================== */
+
+.student-top-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(230px, 1fr);
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 28px;
+}
+
+/* =====================================
+   PROGRESS CARD
+===================================== */
+
+.student-progress-card {
+  min-width: 0;
+  height: 390px;
+  padding: 22px 32px;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.17);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.student-progress-card > h2,
+.student-hours-card > h2,
+.student-past-heading > h2,
+.student-quick-section > h2 {
+  margin: 0;
+  color: #222;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+/* Progress information */
+
+.student-progress-content {
+  position: relative;
+  padding: 24px 12px 0;
+  text-align: left;
+}
+
+.student-ongoing-label {
+  display: inline-block;
+  padding: 8px 13px;
+  border-radius: 25px;
+  background: #a5c3a5;
+  color: #111;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.student-progress-percentage {
+  position: absolute;
+  top: 58px;
+  right: 12px;
+  color: #111;
+  font-size: 20px;
+}
+
+/* Progress bar */
+
+.student-progress-track {
+  height: 26px;
+  margin-top: 35px;
+  border-radius: 20px;
+  background: #d8d8d8;
+}
+
+.student-progress-fill {
+  position: relative;
+  height: 100%;
+  border-radius: 20px;
+  background: #407354;
+}
+
+.student-progress-knob {
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: 7px solid #407354;
+  border-radius: 50%;
+  background: white;
+  box-sizing: border-box;
+}
+
+/* Ongoing programme information */
+
+.student-ongoing-details {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 55px;
+  padding: 30px 8px 0;
+  border-top: 4px solid #eee;
+  text-align: left;
+}
+
+.student-ongoing-avatar {
+  width: 86px;
+  height: 86px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #c9c2f1;
+  color: #111;
+  font-size: 48px;
+}
+
+.student-ongoing-info {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
+.student-ongoing-info h3 {
+  margin: 0 0 5px;
+  color: #111;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.student-ongoing-info p {
+  margin: 0;
+  color: #999;
+  font-size: 16px;
+  text-align: left;
+}
+
+.student-more-btn {
+  flex-shrink: 0;
+  margin-left: auto;
+  padding: 8px 17px;
+  border: none;
+  border-radius: 20px;
+  background: #eee;
+  color: #111;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.student-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.student-more-chevron {
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid #555;
+  border-bottom: 1.5px solid #555;
+  transform: rotate(45deg);
+  margin-top: -4px;
+  flex-shrink: 0;
+}
+
+/* =====================================
+   VOLUNTEER HOURS CARD
+===================================== */
+
+.student-hours-card {
+  min-width: 0;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 22px;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.17);
+  box-sizing: border-box;
+}
+
+.student-hours-chart {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 10px;
+  padding-top: 25px;
+}
+
+.student-hours-column {
+  flex: 1;
+  height: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 7px;
+}
+
+.student-hours-value {
+  color: #555;
+  font-size: 10px;
+}
+
+.student-hours-bar-wrapper {
+  width: 100%;
+  max-width: 34px;
+  height: 205px;
+  display: flex;
+  align-items: flex-end;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.student-hours-bar {
+  width: 100%;
+  min-height: 3px;
+  border-radius: 6px 6px 0 0;
+}
+
+.student-hours-bar.bar-1 {
+  background: #407354;
+}
+
+.student-hours-bar.bar-2 {
+  background: #68a47a;
+}
+
+.student-hours-bar.bar-3 {
+  background: #7bd94f;
+}
+
+.student-hours-bar.bar-4 {
+  background: #00bd70;
+}
+
+.student-hours-bar.bar-5 {
+  background: #00a982;
+}
+
+.student-hours-column small {
+  color: #555;
+  font-size: 9px;
+}
+
+/* =====================================
+   BOTTOM GRID
+===================================== */
+
+.student-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(230px, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* =====================================
+   PAST VOLUNTEERING
+===================================== */
+
+.student-past-section {
+  min-width: 0;
+}
+
+.student-past-heading {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.student-past-tools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.student-search-box {
+  width: 185px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid #999;
+  border-radius: 20px;
+  background: white;
+  box-sizing: border-box;
+}
+
+.student-search-box input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 10px;
+}
+
+.student-search-box span {
+  color: #555;
+  font-size: 19px;
+}
+
+.student-sort-select {
+  max-width: 160px;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid #222;
+  border-radius: 20px;
+  background: white;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/* Programme cards */
+
+.student-past-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.student-past-card {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #407354;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.student-past-image {
+  position: relative;
+  height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #a5c3a5;
+}
+
+.student-past-illustration {
+  font-size: 75px;
+}
+
+.student-past-hours {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: #407354;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.student-past-info {
+  min-height: 100px;
+  padding: 15px 12px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.student-past-info h3 {
+  margin: 0 0 9px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.student-past-info p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  color: white;
+  font-size: 12px;
+}
+
+.student-org-avatar {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+.student-no-results {
+  color: #777;
+  font-size: 13px;
+}
+
+/* =====================================
+   QUICK ACTIONS
+===================================== */
+
+.student-quick-section {
+  min-width: 0;
+}
+
+.student-quick-section > h2 {
+  margin-bottom: 14px;
+}
+
+.student-quick-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.student-quick-card {
+  width: 100%;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 13px;
+  border: none;
+  border-radius: 17px;
+  background: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.16);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.student-quick-card:hover {
+  transform: translateY(-2px);
+}
+
+.student-quick-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #13802f;
+  color: white;
+  font-size: 23px;
+}
+
+.student-quick-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.student-quick-text strong {
+  color: #111;
+  font-size: 13px;
+}
+
+.student-quick-text small {
+  color: #888;
+  font-size: 10px;
+}
+
+.student-quick-arrow {
+  flex-shrink: 0;
+  color: #333;
+  font-size: 17px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 1100px) {
+  .student-dashboard-content {
+    padding: 14px 18px 30px;
+  }
+
+  .student-top-grid,
+  .student-bottom-grid {
+    grid-template-columns: minmax(0, 2fr) minmax(210px, 1fr);
+    gap: 16px;
+  }
+
+  .student-progress-card {
+    padding: 22px;
+  }
+
+  .student-ongoing-info h3 {
+    font-size: 17px;
+  }
+
+  .student-past-grid {
+    gap: 8px;
+  }
+
+  .student-past-image {
+    height: 140px;
+  }
+
+  .student-past-info h3 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  .student-top-grid,
+  .student-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-progress-card,
+  .student-hours-card {
+    height: auto;
+    min-height: 340px;
+  }
+
+  .student-ongoing-details {
+    margin-top: 40px;
+    gap: 14px;
+  }
+
+  .student-past-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .student-dashboard-content {
+    padding: 14px;
+  }
+
+  .student-tab-switch {
+    width: 100%;
+  }
+
+  .student-progress-card {
+    padding: 20px 16px;
+  }
+
+  .student-progress-track {
+    height: 18px;
+  }
+
+  .student-progress-knob {
+    width: 32px;
+    height: 32px;
+  }
+
+  .student-ongoing-details {
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+
+  .student-ongoing-avatar {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+  }
+
+  .student-ongoing-info {
+    flex: 1 1 150px;
+  }
+
+  .student-ongoing-info h3 {
+    font-size: 14px;
+  }
+
+  .student-ongoing-info p {
+    font-size: 11px;
+  }
+
+  .student-more-btn {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+
+  .student-past-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .student-past-tools {
+    width: 100%;
+  }
+
+  .student-search-box {
+    flex: 1;
+  }
+
+  .student-past-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .student-past-image {
+    height: 120px;
+  }
+
+  .student-past-info h3 {
+    font-size: 13px;
+  }
+}
+
+/* Learning-only adjustments: Volunteer styles remain unchanged. */
+.student-dashboard.learning-mode .student-progress-card {
+  height: 390px;
+}
+
+.student-dashboard.learning-mode .student-progress-fill {
+  width: 0 !important;
+}
+
+.student-dashboard.learning-mode .student-progress-knob {
+  right: auto;
+  left: -12px;
+}
+
+.student-dashboard.learning-mode .student-no-programme {
+  gap: 24px;
+}
+
+.student-dashboard.learning-mode .student-no-programme-avatar {
+  position: relative;
+  width: 86px;
+  height: 86px;
+  flex: 0 0 86px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #d9deeb;
+}
+
+.student-dashboard.learning-mode .student-person-head {
+  position: absolute;
+  top: 17px;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #a4a9b4;
+}
+
+.student-dashboard.learning-mode .student-person-body {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  width: 62px;
+  height: 47px;
+  transform: translateX(-50%);
+  border-radius: 50% 50% 35% 35%;
+  background: #a4a9b4;
+}
+
+.student-dashboard.learning-mode .student-no-programme .student-ongoing-info h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.student-dashboard.learning-mode .student-no-programme .student-ongoing-info p {
+  font-size: 16px;
+}
+
+.student-dashboard.learning-mode .student-past-image {
+  height: 177px;
+}
+
+.student-dashboard.learning-mode .student-past-illustration {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 76px;
+  line-height: 1;
+}
+
+@media (max-width: 800px) {
+  .student-dashboard.learning-mode .student-progress-card {
+    height: auto;
+    min-height: 340px;
+  }
+  .student-dashboard.learning-mode .student-no-programme {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .student-dashboard.learning-mode .student-no-programme-avatar {
+    width: 55px;
+    height: 55px;
+    flex-basis: 55px;
+  }
+  .student-dashboard.learning-mode .student-person-head {
+    top: 10px;
+    width: 21px;
+    height: 21px;
+  }
+  .student-dashboard.learning-mode .student-person-body {
+    bottom: -8px;
+    width: 42px;
+    height: 31px;
+  }
+  .student-dashboard.learning-mode .student-no-programme .student-ongoing-info h3 {
+    font-size: 14px;
+  }
+  .student-dashboard.learning-mode .student-no-programme .student-ongoing-info p {
+    font-size: 11px;
+  }
+  .student-dashboard.learning-mode .student-past-image {
+    height: 120px;
+  }
+}

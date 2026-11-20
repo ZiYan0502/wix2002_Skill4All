@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logoImage from './assets/logo.jpeg';
-import './Dashboard.css';
+import logoImage from "../../assets/logo.jpeg";;
+import './NgoDashboard.css';
 
 export default function Dashboard() {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Login from './Login';
-import Dashboard from './Dashboard';
-import StudentDashboard from './StudentDashboard'; // 学生看板组件
+import Login from './pages/login/Login';
+import Dashboard from './pages/ngo/NgoDashboard';
+import StudentDashboard from './pages/student/StudentDashboard'; // 学生看板组件
 
 export default function App() {
   return (
