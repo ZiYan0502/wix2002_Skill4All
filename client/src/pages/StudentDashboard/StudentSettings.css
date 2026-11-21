@@ -1,0 +1,182 @@
+
+.student-settings-page {
+  display: flex;
+  min-height: 100vh;
+  background: #f0f7f0;
+}
+
+.student-settings-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.student-settings-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px;
+}
+
+.student-settings-card {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 440px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  background: #fff;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Photo */
+
+.student-settings-photo {
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid #ccc;
+  padding: 20px;
+}
+
+.student-settings-avatar {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 3px solid #77b6a5;
+  background: linear-gradient(135deg, #d5df76, #5275e8);
+  color: white;
+  font-size: 65px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.student-change-photo {
+  width: 175px;
+  padding: 8px 15px;
+  border: 2px solid #427a59;
+  border-radius: 25px;
+  background: white;
+  color: #427a59;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.student-remove-photo {
+  margin-top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Profile Information */
+
+.student-settings-form {
+  padding: 15px 0 15px 35px;
+}
+
+.student-settings-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  margin-bottom: 12px;
+}
+
+.student-settings-field label {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.student-settings-field input {
+  width: 100%;
+  height: 34px;
+  padding: 5px 12px;
+  border: 1px solid #777;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+  background: white;
+  color: #222;
+}
+
+.student-settings-field input:disabled {
+  background: white;
+  color: #444;
+  opacity: 1;
+}
+
+.student-settings-field input:focus {
+  border-color: #427a59;
+}
+
+.student-settings-row {
+  display: flex;
+  gap: 12px;
+}
+
+.student-settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.student-edit-btn,
+.student-cancel-btn {
+  min-width: 95px;
+  padding: 7px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.student-edit-btn {
+  background: #427a59;
+  color: white;
+}
+
+.student-edit-btn:hover {
+  background: #2d6344;
+}
+
+.student-cancel-btn {
+  background: #ddd;
+  color: #222;
+}
+
+/* Responsive */
+
+@media (max-width: 750px) {
+  .student-settings-content {
+    padding: 20px;
+  }
+
+  .student-settings-card {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+
+  .student-settings-photo {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    min-height: 250px;
+  }
+
+  .student-settings-form {
+    padding: 25px 0 0;
+  }
+}

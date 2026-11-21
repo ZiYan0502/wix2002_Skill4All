@@ -96,9 +96,10 @@
 /* Menu icons */
 
 .student-menu-icon {
-  width: auto;
-  font-size: 23px;
-  text-align: center;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 /* Hover */

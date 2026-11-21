@@ -1,0 +1,187 @@
+
+.student-friends-page {
+  display: flex;
+  min-height: 100vh;
+  background: #f0f7f0;
+}
+
+.student-friends-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.student-friends-content {
+  padding: 24px 32px;
+}
+
+.student-friends-content h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 20px;
+}
+
+/* Find Friends */
+
+.student-find-friends {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  margin-bottom: 24px;
+}
+
+.student-find-friends h2 {
+  font-size: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.student-find-friends input {
+  flex: 1;
+  min-width: 0;
+  height: 38px;
+  border: 1px solid #777;
+  border-radius: 20px;
+  padding: 0 16px;
+  font-size: 14px;
+  outline: none;
+}
+
+.student-find-friends input:focus {
+  border-color: #176239;
+}
+
+.student-find-friends select {
+  height: 38px;
+  border: 1px solid #777;
+  border-radius: 20px;
+  padding: 0 12px;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* My Friends */
+
+.student-my-friends h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px 10px;
+}
+
+.student-friends-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.student-friend-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 66px;
+  padding: 10px 18px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.student-friend-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.student-friend-avatar {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e6f0e5;
+  font-size: 23px;
+}
+
+.student-friend-profile h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 3px;
+}
+
+.student-friend-profile p {
+  font-size: 12px;
+  margin: 0;
+  color: #333;
+}
+
+.student-friend-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 190px;
+}
+
+.student-friend-stats strong {
+  color: #176239;
+  font-size: 15px;
+}
+
+.student-friend-stats span {
+  color: #111;
+  background: #9fc19b;
+  border-radius: 15px;
+  padding: 1px 12px;
+  font-size: 14px;
+}
+
+.student-send-invitation-btn {
+  border: 1px solid #176239;
+  color: #176239;
+  background: #fff;
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s;
+}
+
+.student-send-invitation-btn:hover {
+  background: #176239;
+  color: #fff;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .student-friends-content {
+    padding: 20px 14px;
+  }
+
+  .student-find-friends {
+    flex-wrap: wrap;
+  }
+
+  .student-find-friends input {
+    flex-basis: 100%;
+  }
+
+  .student-friend-card {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .student-friend-stats {
+    min-width: 120px;
+  }
+}
